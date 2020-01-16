@@ -1,0 +1,18 @@
+body{
+    background-image: url("blurred-background.jpeg");
+    background-repeat: none;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+header p{
+    text-align: center;
+    font-family: Palatino;
+    color: #ffffff;
+    font-size: 30px;
+}
+.left{
+    display: inline-block;
+    float: left;
+    width:25%;
+    background-color:rgba(235,217,198, 0.4);
+}
