@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/cssNormalDate.css">
+	<meta charset="UTF-8">
+	<title>Date Selection</title>
+	<script src="js/js1.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Check-in Automation System</h1>
+		<nav>
+			<a href="NormalDate.html" class="active">Date</a>
+			<a href="NormalRoomBooking.html">Room Booking</a>
+			<a href="NormalPayment">Payment</a>
+			<a href="NormalCheckout">Checkout</a>
+		</nav>
+    </header>
+    <main>
+        <div id="box">
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 100px;">Please select your check-in date.</p>
+			<form action="/action_page.php" style="padding-left: 100px;">
+				<input type="date" name="bday">
+            </form>
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 100px;" >Enter the number of nights you wish to stay.</p>
+			<input type="text" style="margin-left:100px;width:60px;" placeholder="0" id="num"><br><br>
+            <input type="button" name="Submit" onclick="displayInLabel()" value="Submit" style="margin-left: 100px;"><br><br>
+            <p id="p1"></p><br><br>
+			<input type="button" value="Confirm" style="margin-left: 100px; visibility: hidden;" id="butt1" onclick="window.location.href='NormalRoomBooking.html';">&nbsp;&nbsp;
+        </div>   
+    </main>
