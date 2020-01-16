@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="{% static "css/cssNormalConfirmation.css" %}">
+	<meta charset="UTF-8">
+	<title>Room Booking</title>
+	<script src="{% static "js/js1.js" %}"></script>
+</head>
+<body>
+	<header>
+		<h1>Check-in Automation System</h1>
+		<nav>
+			<a href="normal" >Date</a>
+			<a href="roombook">Room Booking</a>
+			<a href="payment">Payment</a>
+			<a href="confirm" class="active">Confirmation</a>
+		</nav>
+    </header>
+    <main>
+        <div id="box">
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 250px;text-decoration: underline;">Your details are as follows:</p>
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 250px;">Number of nights of stay: 5</p>
+            <p id="hid" style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 100px;"></p>
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 250px;">Bed Chosen: KING SIZE</p>
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 250px;">Payment Mode Chosen: CASH</p>
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 250px;">Total Amount: 40,000/-</p>
+            <input type="button" value="Confirm and Exit" style="margin-left: 250px;" onclick="window.close()">
+        </div>   
+    </main>

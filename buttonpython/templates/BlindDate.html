@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="css/cssWelcomePage.css">
+    <link rel="stylesheet" href="css/cssBlindDate.css">
     <head>
         <title>Welcome to the Den</title>
     </head>
     <body>
-    <div id="box1">
-        
-    </div>
     <p id="motto">Don't just stay, live.</p>
     <div id="box">
         <p id="tit">Would you like Savy assistance?</p><br>
-        <audio src="assets/SampleAudio.mp3" controls id="aud">
+        <audio src="assets/SampleAudio.mp3" controls loop="loop" id="aud">
         </audio>
         <br>
         <input type="button" value="Yes, I think Savy assistance is cool!" style="margin-left: 100px; height: 30px;" onclick="window.location.href='BlindDate.html'">
@@ -22,15 +19,3 @@
     </div> 
     </body>
 </html>
-<script type="text/javascript">
-window.onload=function(){
-console.log("hi");
-    document.getElementById("aud").play();
-  }
-var vid = document.getElementById("aud");
-console.log("hi");
-vid.onended = function() {
-	document.href = "/output";
-	console.log("hello");
-}
-</script>

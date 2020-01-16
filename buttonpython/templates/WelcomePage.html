@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <link rel="stylesheet" href="{% static "css/cssWelcomePage.css" %}">
+    <head>
+        <title>Welcome to the Den</title>
+    </head>
+    <body>
+    <div id="box1">
+        
+    </div>
+    <p id="motto">Don't just stay, live.</p>
+    <div id="box">
+        <p id="tit">Would you like Savy assistance?</p><br>
+        <audio src="{% static "assets/welcometosavyfinal.mp4" %}" controls id="aud" >
+        </audio>
+        <br>
+		<input type="button" value="Yes, I think Savy assistance is cool!" style="margin-left: 100px; height: 30px;" onclick="window.location.href='BlindDate.html'">
+        <input type="button" value="No, I'll stick to the usual" style="margin-left: 100px; height: 30px;" onclick="window.location.href='normal'">
+		<br>
+		<button onclick="location.href='{% url 'script1' %}'">Execute Script</button>
+        
+	</div>   
+    <div id="right">
+
+    </div> 
+    </body>
+</html>
+<script type="text/javascript">
+window.onload=function(){
+    document.getElementById("aud").play();
+  }
+ var vid = document.getElementById("aud");
+console.log("hi");
+vid.onended = function() {
+	window.open("/output", "_self");
+	console.log("hello");
+}
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="{% static "css/cssNormalRoomBooking.css" %}">
+	<meta charset="UTF-8">
+	<title>Room Booking</title>
+	<script src="{% static "js/js1.js" %}"></script>
+</head>
+<body>
+	<header>
+		<h1>Check-in Automation System</h1>
+		<nav>
+			<a href="normal" >Date</a>
+			<a href="roombook" class="active">Room Booking</a>
+			<a href="payment">Payment</a>
+			<a href="confirm">Confirmation</a>
+		</nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="column">
+                <img src="{% static "assets/king-size-bed.jpg" %}" alt="King Size Bed" style="width: 80%;">
+                <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: #000000;;text-align:center;">Price: 8000/-</p>
+            </div>
+            <div class="column">
+                <img src="{% static "assets/twin-size-bed.jfif" %}" alt="Twin Size Bed" style="width: 80%;">
+                <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: #000000;;text-align:center;">Price: 6000/-</p>
+            </div>
+            <div class="column">
+                <img src="{% static "assets/queen-size-bed.jpeg" %}" alt="Queen Size Bed" style="width: 80%; height: 285px;">
+                <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: #000000;;text-align:center;">Price: 4000/-</p>
+            </div>
+          </div>
+          <select name="Rooms" id="rooms" style="position: absolute; left: 45%; width: 10%;">
+            <option value=""></option>
+            <option value="KingSize">King Size</option>
+            <option value="Twin Size">Twin Size</option>
+            <option value="QueenSize">Queen Size</option>
+          </select>
+          <br><br>
+          <input type="button" value="Select Room" style="position: absolute; left:45%;" onclick="window.location.href='payment'">
+    </main> 

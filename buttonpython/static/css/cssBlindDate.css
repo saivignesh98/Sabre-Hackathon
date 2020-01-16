@@ -1,0 +1,6 @@
+body{
+    background-image: url("blurred-background.jpeg");
+    background-repeat: none;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}

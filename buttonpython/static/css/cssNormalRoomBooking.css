@@ -1,0 +1,48 @@
+header{
+    padding-top: 5px;
+    background-color:rgba(235,217,198, 0.1);
+}
+header h1{
+    color: #ffffff;
+    text-align: center;
+}
+body{
+    background-image: url("blurred-background.jpeg");
+}
+nav a{
+    display: inline-block;
+    width:15%;
+    height:50px;
+    background-color: rgba(242,242,242,0.25);
+    text-align: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 25px;
+    padding-top: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.active{
+    background-color: rgba(235,217,198,0.75);
+}
+nav a:hover{
+    background-color: rgba(235,217,198,0.5);
+}
+.column {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    background-color: rgba(235,217,198,0.5);
+    padding: 10px;
+    height: 100%;
+    margin: 1%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
