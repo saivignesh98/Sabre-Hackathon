@@ -4,15 +4,48 @@ body{
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-header p{
-    text-align: center;
-    font-family: Palatino;
-    color: #ffffff;
-    font-size: 30px;
+#box{
+    display: inline;
+    position: absolute;
+    left:25%;
+    top:35%;
+    clear: none;
+    background-color:rgba(235,217,198, 0.4);
+    height: 50%;
+    width: 50%;
 }
-.left{
+#motto{
+    display: inline;
+    position: absolute;
+    clear: none;
+    font-size: 50px;
+    color: #ffffff;
+    left:38%;
+    top:15%;
+    font-family: Palatino, Garamand, Bookman;
+}
+#tit{
+    font-family: Palatino,Garamand;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    padding-top: 0px;
+    line-height: 40px;
+}
+#scanner-text{
+    color: #ffffff;
+    font-family: Palatino;
+    margin-top: 0px;
+    margin-left: 5px;
+    font-size: 35px;
+    text-align: center;
+}
+#right{
     display: inline-block;
     float: left;
-    width:25%;
+    clear: left;
+    width:20%;
     background-color:rgba(235,217,198, 0.4);
+    height: 100%;
 }
+
