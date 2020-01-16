@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+<html>
+    <link rel="stylesheet" href="{% static "css/cssWelcomePage.css" %}">
+    <head>
+        <title>Days</title>
+    </head>
+    <body>
+    <div id="box1">
+        
+    </div>
+    <p id="motto">Hi {{ name }}, how many nights do you want a room for?</p>
+    <div id="box">
+        
+        <audio src="{% static "assets/hi+name.mp4" %}" controls id="aud2" >
+        </audio>
+     
+        
+	</div>   
+    <div id="right">
+
+    </div> 
+    </body>
+</html>
+<script type="text/javascript">
+window.onload=function(){
+    document.getElementById("aud2").play();
+  }
+ var vid = document.getElementById("aud2");
+console.log("hi");
+vid.onended = function() {
+	window.open("/days", "_self");
+	console.log("hello");
+}
+</script>

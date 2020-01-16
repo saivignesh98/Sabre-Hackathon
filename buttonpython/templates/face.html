@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <link rel="stylesheet" href="{% static "css/cssWelcomePage.css" %}">
+    <head>
+        <title>Days</title>
+    </head>
+    <body>
+    <div id="box1">
+        
+    </div>
+    <p id="motto">Please sit down for image capture</p>
+    <div id="box">
+        
+        <audio src="{% static "assets/seat.mp4" %}" controls id="aud3" >
+        </audio>
+     
+        
+	</div>   
+    <div id="right">
+
+    </div> 
+    </body>
+</html>
+<script type="text/javascript">
+window.onload=function(){
+    document.getElementById("aud3").play();
+  }
+ var vid = document.getElementById("aud3");
+console.log("hi");
+vid.onended = function() {
+	window.open("/selectroom", "_self");
+	console.log("hello");
+}
+</script>
