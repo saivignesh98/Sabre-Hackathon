@@ -31,13 +31,10 @@ nav a{
 nav a:hover{
     background-color: rgba(235,217,198,0.5);
 }
-#box{
-    display: inline;
-    position: absolute;
-    left:25%;
-    top:35%;
-    clear: none;
-    background-color:rgba(235,217,198, 0.4);
-    height: 50%;
-    width: 50%;
+.left{
+    float: left;
+    background-color:rgba(235,217,198, 0.1);
+    width: 25%;
+    height: 40%;
+    clear: both;
 }
