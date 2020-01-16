@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/style2.css">
+	<meta charset="UTF-8">
+	<title>Room Booking</title>
+	<script src="js/js1.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Check-in Automation System</h1>
+		<nav>
+			<a href="HomePage.html">Date</a>
+			<a href="RoomBooking.html" class="active">Room Booking</a>
+			<a href="">Payment</a>
+			<a href="" target="_blank">Checkout</a>
+		</nav>
+    </header>
+    <main>
+        <aside class = "left">
+            <h2>Blind gang</h2>
+        </aside>
+        <section class = "right">
+            <h2>Welcome to the automated check-in system.</h2><br>
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 300px;">Please select your check-in date.</p>
+            <form action="/action_page.php" style="padding-left: 305px;">
+                <input type="date" name="bday">
+            </form>
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 300px;" >Enter the number of nights you wish to stay.</p>
+            <input type="text" style="margin-left:305px;width:60px;" placeholder="0" id="num"><br><br>
+            <input type="button" name="Submit" onclick="displayInLabel()" value="Submit" style="margin-left: 305px;"><br><br>
+            <p id="p1"></p><br><br>
+            <input type="button" value="Confirm" style="margin-left: 305px; visibility: hidden;" id="butt1" onclick="window.location.href='RoomBooking.html'">&nbsp;&nbsp;
+        </section>
+</main>
+</body>
+</html>
