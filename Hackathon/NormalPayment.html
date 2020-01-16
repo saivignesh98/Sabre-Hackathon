@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/cssNormalPayment.css">
+	<meta charset="UTF-8">
+	<title>Normal Payment</title>
+	<script src="js/js2.js"></script>
+</head>
+<body>
+    <header>
+		<h1>Check-in Automation System</h1>
+		<nav>
+			<a href="NormalDate.html">Date</a>
+			<a href="NormalRoomBooking.html" >Room Booking</a>
+			<a href="NormalPayment" class="active">Payment</a>
+			<a href="NormalCheckout">Confirmation</a>
+		</nav>
+    </header>
+    <main>
+        <div id="box">
+            <p style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 100px;">Please select your mode of Payment.</p>
+			<select name="Payments" id="payments" style="position: absolute; margin-left: 100px;" onchange="hidDisplay()">
+                <option value="">Payment Method</option>
+                <option value="COD">Cash Payment</option>
+                <option value="CC">Credit Card</option>
+                <option value="DC">Debit Card</option>
+            </select>
+            <br>
+            <p id="hid" style="font-family: Palatino,Garamand,Bookman;font-size:20px;color: white; padding-left: 100px;"></p>
+            <br>
+            <input type="button" style="margin-left: 100px;" value="Proceed to confirmation" onclick="window.location.href='NormalConfirmation.html'">
+        </div>   
+    </main>
