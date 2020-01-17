@@ -3,23 +3,28 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>WebcamJS Test Page</title>
+	<title>Image Collection</title>
 	<style type="text/css">
-		body { font-family: Helvetica, sans-serif; }
+		body {background-image: url("blurred-background.jpeg"); font-family: Helvetica, sans-serif; }
 		h2, h3 { margin-top:0; }
 		form { margin-top: 15px; }
 		form > input { margin-right: 15px; }
-		#results { float:right; margin:20px; padding:20px; border:1px solid; background:#ccc; }
+		#results { float:right; padding-right:200px; margin-top:60px; border:1px solid; background:#ccc; }
+		#left{ float:left; padding-left:200px;padding-top: 30px;}
 	</style>
 </head>
 <body>
 	<div id="results">Your captured image will appear here...</div>
-	
-	<h1>WebcamJS Test Page</h1>
+	<div id="left">
+	<h1>Please sit down for the camera</h1>
 	<h3>Demonstrates simple 320x240 capture &amp; display</h3>
 	<div id="div2"></div>
 	<div id="my_camera"></div>
-	<canvas id="mycanvas" width="300" height="150"></canvas>
+	<form>
+		<input type=button value="Take Snapshot" id="button1" onclick="take_snapshot()">
+	</form>
+	<p id="countdowntimer" onchange="buttClick()">10</p>
+	</div>
 	<!-- First, include the Webcam.js JavaScript Library -->
 	<script type="text/javascript" src="../webcam.min.js"></script>
 	
@@ -35,9 +40,7 @@
 	</script>
 	
 	<!-- A button for taking snaps -->
-	<form>
-		<input type=button value="Take Snapshot" onClick="take_snapshot()">
-	</form>
+	
 	
 	<!-- Code to handle taking the snapshot and displaying it locally -->
 	<script language="JavaScript">
@@ -55,6 +58,28 @@
 }
 
 	</script>
-	
+	<p> The download will begin in <span id="countdowntimer">10 </span> Seconds</p>
+
+	<script type="text/javascript">
+		var timeleft = 10;
+		var downloadTimer = setInterval(function(){
+		timeleft--;
+		document.getElementById("countdowntimer").textContent = timeleft;
+		if(timeleft==0)
+		{
+			document.getElementById("button1").click();
+		}
+		if(timeleft <= 0)
+			clearInterval(downloadTimer);
+		},1000);
+	</script>
+	<script type="text/javascript">
+	function buttClick(){
+		var a=document.getElementById("countdowntimer").innerHTML;
+		alert(a);
+		if(a==="0")
+			document.getElementById("button1").click();
+	}
+	</script>
 </body>
 </html>
