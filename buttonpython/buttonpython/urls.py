@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^selectroom', views.selectroom, name="selectroom"),
     url(r'^payment', views.payment, name="payment"),
     url(r'^confirm', views.confirm, name="confirm"),
+    url(r'^identity', views.identity, name="identity"),
 ]

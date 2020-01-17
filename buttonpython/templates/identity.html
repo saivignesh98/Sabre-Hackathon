@@ -16,16 +16,16 @@
 <body>
 	<div id="results">Your captured image will appear here...</div>
 	<div id="left">
-	<h1 style="color: cornsilk;">Please sit down for the camera</h1>
+	<h1 style="color: cornsilk;">Please show your valid ID </h1>
 	<div id="div2"></div>
 	<div id="my_camera"></div>
+	<audio src="{% static "assets/id_photo.mp4" %}" controls id="aud" >
+        </audio>
+        
 	<form>
 		<input type=button value="Take Snapshot" id="button1" onclick="take_snapshot()" style="visibility: hidden;">
 	</form>
 	<p id="countdowntimer" onchange="buttClick()" style="font-size: xx-large; color: wheat;">10</p>
-	<audio src="{% static "assets/seat.mp4" %}" controls id="aud" >
-        </audio>
-        
 	</div>
 	
 	<!-- First, include the Webcam.js JavaScript Library -->
@@ -47,6 +47,7 @@
 	
 	<!-- Code to handle taking the snapshot and displaying it locally -->
 	<script language="JavaScript">
+	
 		function take_snapshot() {
 			// take snapshot and get image data
 			Webcam.snap( function(data_uri) {
@@ -58,15 +59,12 @@
 				window.location.href = data_uri.replace('image/jpeg', 'image/octet-stream');
 			} )
 			document.getElementById("div2").innerHTML=document.getElementById('results').innerHTML;
-			window.open("/identity", "_self");
+			window.open("/confirm", "_self");
 }
 
 	</script>
 
 	<script type="text/javascript">
-	window.onload=function(){
-    document.getElementById("aud").play();
-  }
 		var timeleft = 10;
 		var downloadTimer = setInterval(function(){
 		timeleft--;
@@ -89,3 +87,12 @@
 	</script>
 </body>
 </html>
+
+<script type="text/javascript">
+window.onload=function(){
+    document.getElementById("aud").play();
+  }
+ var vid = document.getElementById("aud4");
+console.log("hi");
+
+</script>

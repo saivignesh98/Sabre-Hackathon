@@ -11,7 +11,7 @@ def output(request):
     with sr.Microphone() as source :
 		#audio = r.adjust_for_ambient_noise(source)
         print("Speak now")
-        audio=r.listen(source,timeout=1,phrase_time_limit=2)
+        audio=r.listen(source,timeout=3,phrase_time_limit=2)
         print("done")
         try :
             print(audio)
@@ -31,7 +31,7 @@ def saveName(request):
     with sr.Microphone() as source :
 		#audio = r.adjust_for_ambient_noise(source)
         print("Speak now")
-        audio=r.listen(source,timeout=1,phrase_time_limit=2)
+        audio=r.listen(source,timeout=3,phrase_time_limit=2)
         print("done")
         try :
             print(audio)
@@ -63,7 +63,7 @@ def days(request):
     with sr.Microphone() as source :
 		#audio = r.adjust_for_ambient_noise(source)
         print("Speak now")
-        audio=r.listen(source,timeout=1,phrase_time_limit=2)
+        audio=r.listen(source,timeout=3,phrase_time_limit=2)
         print("done")
         try :
             print(audio)
@@ -83,7 +83,7 @@ def selectroom(request):
     text = ""
     with sr.Microphone() as source :
         print("Speak now")
-        audio=r.listen(source,timeout=1,phrase_time_limit=2)
+        audio=r.listen(source,timeout=3,phrase_time_limit=2)
         print("done")
         try :
             print(audio)
@@ -96,13 +96,16 @@ def selectroom(request):
     file2write=open("room.txt",'w')
     file2write.write(text.strip())
     file2write.close()
-    return render(request, 'face.html')
+    return render(request, 'demos/basic.html')
 	
 def payment(request):
     return render(request, 'NormalPayment.html')
 	
 def confirm(request):
     return render(request, 'NormalConfirmation.html')
+	
+def identity(request):
+    return render(request, 'identity.html')
 '''data= requests.get("https://www.google.com")
 
 print(data.text)
