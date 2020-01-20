@@ -1,2 +1,2 @@
 # Sabre-Hackathon
- 
+ The winning entry of the Sabre Intern Hackathon 2020, this project features an automated check-in system for hotels. It allows guests to check in without any employee assistance, while leveraging speech-to-text and text-to-speech for customer interaction. It also features a security system involving verification of government-issued ID proof and facial recognition to confirm identity and provide navigational assistance. Additionally, we also provide complete assistance to visually impaired guests.
